@@ -1,11 +1,16 @@
 # meowtaverse-games.com
 
-The Meowtaverse Games website, built with Astro 5, Tailwind CSS 4, and
+The Meowtaverse Games website, built with Astro 7, Tailwind CSS 4, and
 Tailwind Typography. All pages are static; no analytics or signup forms are used.
+
+The Typography dependency currently pins an older `postcss-selector-parser`.
+A scoped npm override selects the patched 7.1.6+ release; keep it until the
+upstream dependency is updated. Check the build and generated CSS when changing
+this override.
 
 ## Local development
 
-Use Node.js 22 (22.12 or newer) and npm.
+Use Node.js 22.22.0 or newer and npm. GitHub Actions uses Node.js 22.22.3.
 
 ```sh
 npm ci
