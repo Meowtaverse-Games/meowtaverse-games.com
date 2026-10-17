@@ -1,0 +1,36 @@
+---
+import Base from '../../layouts/Base.astro';
+---
+
+<Base title="割り箸バトル（Waribashi）— Meowtaverse Games" description="指を足して、分けて、勝利を目指すターン制の戦略ゲーム。割り箸バトルは、ローカル・CPU・オンラインの3つのモードで遊べます。">
+  <article class="max-w-3xl">
+    <p class="eyebrow mb-4" lang="en">WARIBASHI / CHOPSTICKS</p>
+    <h1 class="text-4xl leading-tight font-bold tracking-tight sm:text-5xl">割り箸バトル</h1>
+    <p class="mt-5 text-xl font-medium">指先ひとつで、次の一手を。</p>
+    <p class="mt-6 text-slate-600">割り箸バトルは、指を使ったターン制の戦略ゲームです。両手それぞれ1本の指からスタートし、「攻撃」で相手の指を増やすか、「分割」で自分の指を再配分。基本ルールでは5本以上になった手がアウトになり、相手の両手をアウトにすれば勝利です。</p>
+    <section class="mt-8 rounded-2xl bg-white p-6 ring-1 ring-ink/10 sm:p-8" aria-labelledby="modes-heading">
+      <h2 id="modes-heading" class="text-lg font-bold">好きなスタイルで、ひと勝負。</h2>
+      <ul class="mt-4 list-disc space-y-2 pl-5 text-slate-600">
+        <li>ローカル対戦：1台の端末で友達と対戦</li>
+        <li>CPU対戦：4段階の難易度に挑戦</li>
+        <li>オンライン対戦：世界中のプレイヤーとリアルタイム対戦</li>
+      </ul>
+      <p class="mt-5 text-sm text-slate-600">ルールの切り替えやチュートリアルも用意。日本語・英語に対応しています。</p>
+    </section>
+
+    <section class="mt-10" lang="en" aria-labelledby="english-heading">
+      <h2 id="english-heading" class="text-xl font-bold">Simple rules. A thoughtful next move.</h2>
+      <p class="mt-4 text-slate-600">Waribashi (Chopsticks) is a turn-based finger strategy game. Attack to add fingers to your opponent’s hand, or split to redistribute your own. Under the standard rules, a hand with five or more fingers is out. Eliminate both of your opponent’s hands to win.</p>
+      <p class="mt-4 text-slate-600">Play with a friend on one device, challenge the CPU across four difficulty levels, or battle players online. Includes rule variations, a tutorial, and support for English and Japanese.</p>
+    </section>
+
+    <div class="mt-10">
+      <a href="https://apps.apple.com/app/id6760738303" class="button">App Store で見る</a>
+      <p class="mt-4 text-sm text-slate-500">Android 版は準備中</p>
+    </div>
+    <nav aria-label="割り箸バトルの関連ページ" class="mt-10 flex flex-wrap gap-x-6 gap-y-3 border-t border-ink/10 pt-6 text-sm">
+      <a href="/waribashi/privacy/" class="text-link">プライバシーポリシー</a>
+      <a href="/waribashi/support/" class="text-link">サポート</a>
+    </nav>
+  </article>
+</Base>
