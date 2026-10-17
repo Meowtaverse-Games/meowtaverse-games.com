@@ -41,6 +41,7 @@ Pages use directory indexes so URLs work with or without a trailing slash
 
 `.github/workflows/deploy.yml` installs the locked dependencies, builds the site,
 and deploys `dist/` to GitHub Pages on pushes to `main` or manual runs.
+Pull requests to `main` run the build only, without deploying.
 The custom domain is `https://meowtaverse-games.com`, without a repository path.
 
 `public/CNAME` contains the custom domain and is copied to the output root.
