@@ -1,0 +1,38 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description: string;
+}
+
+const { title, description } = Astro.props;
+---
+
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+  </head>
+  <body class="flex min-h-screen flex-col">
+    <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:z-10 focus:bg-white focus:p-4">本文へ移動</a>
+    <header class="border-b border-ink/10">
+      <nav aria-label="メインナビゲーション" class="mx-auto flex max-w-5xl flex-wrap items-center justify-between gap-4 px-6 py-6 sm:px-10">
+        <a href="/" class="text-lg font-bold tracking-tight sm:text-xl">Meowtaverse Games</a>
+        <a href="/waribashi/" class="text-sm text-accent underline">割り箸バトル</a>
+      </nav>
+    </header>
+    <main id="main" class="mx-auto w-full max-w-5xl flex-1 px-6 py-12 sm:px-10 sm:py-20">
+      <slot />
+    </main>
+    <footer class="border-t border-ink/10">
+      <div class="mx-auto flex max-w-5xl flex-col gap-3 px-6 py-8 text-xs text-slate-600 sm:flex-row sm:items-center sm:justify-between sm:px-10">
+        <p>© 2026 Meowtaverse Games</p>
+        <a href="/waribashi/privacy/" class="underline">割り箸バトルのプライバシーポリシー</a>
+      </div>
+    </footer>
+  </body>
+</html>
