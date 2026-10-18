@@ -5,7 +5,7 @@ import Base from '../../../../layouts/Base.astro';
 <Base lang="en" alternatePath="/waribashi/privacy/" title="Privacy policy — Waribashi - Chopsticks Battle" description="Privacy policy for Waribashi - Chopsticks Battle">
   <article class="legal">
     <h1>Privacy policy</h1>
-    <p><a href="/waribashi/privacy/" lang="ja" hreflang="ja" class="button">日本語</a></p>
+    <p><a href="/waribashi/privacy/" lang="ja" hreflang="ja" class="button not-prose">日本語</a></p>
     <p>Waribashi - Chopsticks Battle</p>
     <p>Last updated: October 18, 2026</p>
     <p>This English version is a translation. If there is any inconsistency, the Japanese version prevails.</p>
@@ -30,11 +30,11 @@ import Base from '../../../../layouts/Base.astro';
           <li>App usage (number of plays, game modes, ad impressions and taps, etc.)</li>
           <li>Diagnostic information such as crash logs and error information</li>
           <li>
-            In-app identifiers (Firebase app instance IDs, anonymous authentication user IDs, iOS identifier for vendor [IDFV],
+            In-app identifiers (Firebase app instance IDs, anonymous authentication user IDs, iOS identifier for vendors (IDFV),
             and identifiers used by Google AdMob for ad delivery and fraud prevention)
           </li>
           <li>
-            Approximate region inferred from the IP address (at roughly the city, ward, town, or village level, not precise location from GPS or similar methods.
+            Approximate region inferred from the IP address (at roughly the city level, not precise location from GPS or similar methods.
             Google AdMob and Firebase Analytics use this for ad delivery, usage analysis, and fraud prevention)
           </li>
         </ul>
@@ -125,8 +125,8 @@ import Base from '../../../../layouts/Base.astro';
           <li>We have also disabled the sending of ad personalization signals by Firebase Analytics.</li>
         </ul>
         <p>
-          However, the iOS version available on the App Store as of October 18, 2026 (including versions released before that date)
-          does not have the child-directed settings described above. These versions request tracking permission through the
+          However, the iOS versions available on the App Store as of October 18, 2026 (including versions released before that date)
+          do not have the child-directed settings described above. These versions request tracking permission through the
           App Tracking Transparency (ATT) framework and use the IDFA if permission is granted; they may also display interest-based ads.
           Future iOS updates will adopt the practices described above.
         </p>
