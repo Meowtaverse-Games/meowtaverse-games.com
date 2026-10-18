@@ -32,6 +32,10 @@ The generated site is in `dist/`. Stop either local server with Ctrl+C.
 - `/waribashi/`: game introduction and App Store link
 - `/waribashi/privacy/`: Japanese privacy policy
 - `/waribashi/support/`: Japanese support page
+- `/en/`: English brand homepage and game listing
+- `/en/waribashi/`: English game introduction and App Store link
+- `/en/waribashi/privacy/`: English privacy policy
+- `/en/waribashi/support/`: English support page
 - `/404.html`: custom not-found page
 
 Pages use directory indexes so URLs work with or without a trailing slash
