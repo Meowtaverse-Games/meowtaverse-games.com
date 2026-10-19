@@ -70,8 +70,13 @@ import Base from '../../../../layouts/Base.astro';
             For analytics, identifiers such as cookies are stored in your browser.
           </li>
           <li>Firebase Crashlytics is not used.</li>
-          <li>Instead of the device type, information such as the browser type and language settings is sent.</li>
+          <li>
+            In addition to device type, OS version, and language settings, information such as browser type and version, screen size, and the page viewed and referring page is sent.
+          </li>
           <li>Anonymous authentication information and game settings are stored in your browser’s storage.</li>
+          <li>
+            The program and fonts needed to display the browser version are loaded from Google servers (gstatic.com). When this happens, your IP address and browser information are sent to Google.
+          </li>
         </ul>
       </section>
 
@@ -114,7 +119,10 @@ import Base from '../../../../layouts/Base.astro';
             </a>
           </li>
           <li>
-            <strong>Firebase Crashlytics</strong> (crash reporting)
+            <strong>Firebase Crashlytics</strong> (crash reporting; app version only)
+          </li>
+          <li>
+            <strong>Firebase Hosting</strong> (delivery of the browser version; browser version only)
           </li>
           <li>
             <strong>Firebase Authentication</strong> (anonymous authentication)
@@ -154,7 +162,8 @@ import Base from '../../../../layouts/Base.astro';
         <ul>
           <li>Game settings data is stored only on your device and is deleted when you uninstall the app.</li>
           <li>
-            In the browser version, anonymous authentication information and game settings are stored in your browser and are deleted when you clear this site’s data in your browser
+            In the browser version, anonymous authentication information, game settings, and analytics identifiers (including cookies) are stored in your browser.
+            They are deleted when you clear the data for the browser version’s site (waribashi.meowtaverse-games.com; analytics cookies may be stored on meowtaverse-games.com) in your browser
             (the anonymous authentication account and room records on Firebase are handled as described below).
           </li>
           <li>
@@ -181,7 +190,7 @@ import Base from '../../../../layouts/Base.astro';
         <h2>7. Children’s privacy</h2>
         <p>
           The app is intended for all ages, including children. The following describes the practices in versions with the child-directed settings in Section 5
-          (see Section 5 for the exception for older iOS versions).
+          (see Section 5 for the exception for older iOS versions). The same applies to the browser version (which does not display ads).
         </p>
         <ul>
           <li>
@@ -200,7 +209,7 @@ import Base from '../../../../layouts/Base.astro';
             Parents and guardians can contact us using the contact in Section 9 about the handling of their child’s information. We also respond to requests such as deletion of information.
             Because we do not hold information that can identify users, such as names, please provide details such as the approximate date and time of online battle use when making a request.
             If we cannot identify the relevant data, or it has already been deleted automatically, we will explain this.
-            Uninstalling the app also stops further information collection.
+            Uninstalling the app also stops further information collection. In the browser version, closing the page stops collection, and clearing the site’s data also deletes the identifiers.
           </li>
         </ul>
       </section>
