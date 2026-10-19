@@ -7,7 +7,7 @@ import Base from '../../../../layouts/Base.astro';
     <h1>Privacy policy</h1>
     <p><a href="/waribashi/privacy/" lang="ja" hreflang="ja" class="button not-prose">日本語</a></p>
     <p>Waribashi - Chopsticks Battle</p>
-    <p>Last updated: October 18, 2026</p>
+    <p>Last updated: October 19, 2026</p>
     <p>This English version is a translation. If there is any inconsistency, the Japanese version prevails.</p>
 
     <div>
@@ -57,6 +57,22 @@ import Base from '../../../../layouts/Base.astro';
           <li>Contacts, photos, or other data on your device</li>
           <li>Android advertising ID</li>
         </ul>
+
+        <h3>2.4 Browser version</h3>
+        <p>
+          The app can also be played in a web browser (https://waribashi.meowtaverse-games.com/).
+          The browser version works as follows; otherwise, it is the same as the app version.
+        </p>
+        <ul>
+          <li>It does not display ads (Google AdMob is not used).</li>
+          <li>
+            Firebase Analytics is used to analyze usage. Storage and use of data for advertising, ad personalization, and Google signals are disabled.
+            For analytics, identifiers such as cookies are stored in your browser.
+          </li>
+          <li>Firebase Crashlytics is not used.</li>
+          <li>Instead of the device type, information such as the browser type and language settings is sent.</li>
+          <li>Anonymous authentication information and game settings are stored in your browser’s storage.</li>
+        </ul>
       </section>
 
       <section>
@@ -78,7 +94,7 @@ import Base from '../../../../layouts/Base.astro';
         </p>
         <ul>
           <li>
-            <strong>Google AdMob</strong> (ad delivery) —
+            <strong>Google AdMob</strong> (ad delivery; app version only) —
             <a
               href="https://policies.google.com/privacy?hl=en"
               target="_blank"
@@ -112,7 +128,7 @@ import Base from '../../../../layouts/Base.astro';
       <section>
         <h2>5. Advertising and tracking</h2>
         <p>
-          The app displays ads using Google AdMob.
+          The app displays ads using Google AdMob (the browser version does not display ads).
           Because the app is intended for all ages, including children, it requests ads with settings that treat all users as children.
         </p>
         <ul>
@@ -137,6 +153,10 @@ import Base from '../../../../layouts/Base.astro';
         <h2>6. Data storage and deletion</h2>
         <ul>
           <li>Game settings data is stored only on your device and is deleted when you uninstall the app.</li>
+          <li>
+            In the browser version, anonymous authentication information and game settings are stored in your browser and are deleted when you clear this site’s data in your browser
+            (the anonymous authentication account and room records on Firebase are handled as described below).
+          </li>
           <li>
             The online battle room record (including the user IDs, battle state, and timestamps described in Section 2.2) typically expires 24 hours after the last activity
             (including automatic communication while the battle screen is open) and is then automatically deleted, typically within 24 hours of expiring.
