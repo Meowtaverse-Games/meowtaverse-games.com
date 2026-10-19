@@ -126,8 +126,9 @@ import Base from '../../../../layouts/Base.astro';
         </ul>
         <p>
           However, the iOS versions available on the App Store as of October 18, 2026 (including versions released before that date)
-          do not have the child-directed settings described above. These versions request tracking permission through the
+          do not have the child-directed settings described above (other than the limit on ad content). These versions request tracking permission through the
           App Tracking Transparency (ATT) framework and use the IDFA if permission is granted; they may also display interest-based ads.
+          Since October 18, 2026, ad content in these versions is also limited to general audiences (G).
           Future iOS updates will adopt the practices described above.
         </p>
       </section>
@@ -137,8 +138,17 @@ import Base from '../../../../layouts/Base.astro';
         <ul>
           <li>Game settings data is stored only on your device and is deleted when you uninstall the app.</li>
           <li>
-            Anonymous authentication user IDs and online battle data (Section 2.2) are stored on Firebase and are currently not deleted automatically.
-            We delete them upon request sent to the contact in Section 9.
+            The online battle room record (including the user IDs, battle state, and timestamps described in Section 2.2) typically expires 24 hours after the last activity
+            (including automatic communication while the battle screen is open) and is then automatically deleted, typically within 24 hours of expiring.
+            Even if the device clock is off, it is typically deleted within about 8 days at most.
+            However, room records used only by the Android and iOS versions 1.1.0 and earlier are not deleted automatically
+            (this includes the iOS versions available on the App Store as of October 18, 2026).
+          </li>
+          <li>
+            The anonymous authentication account (user ID) itself in Firebase Authentication is not deleted automatically.
+          </li>
+          <li>
+            Online battle room records and anonymous authentication user IDs are deleted upon request sent to the contact in Section 9.
           </li>
           <li>
             Per-user data in Firebase Analytics is deleted within a maximum of 14 months after the last use (aggregated statistics not linked to individuals are retained).
@@ -169,7 +179,7 @@ import Base from '../../../../layouts/Base.astro';
           <li>
             Parents and guardians can contact us using the contact in Section 9 about the handling of their child’s information. We also respond to requests such as deletion of information.
             Because we do not hold information that can identify users, such as names, please provide details such as the approximate date and time of online battle use when making a request.
-            If we cannot identify the relevant data, we will explain this.
+            If we cannot identify the relevant data, or it has already been deleted automatically, we will explain this.
             Uninstalling the app also stops further information collection.
           </li>
         </ul>
