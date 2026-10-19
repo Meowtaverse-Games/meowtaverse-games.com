@@ -7,7 +7,7 @@ import Base from '../../../../layouts/Base.astro';
     <h1>Privacy policy</h1>
     <p><a href="/waribashi/privacy/" lang="ja" hreflang="ja" class="button not-prose">日本語</a></p>
     <p>Waribashi - Chopsticks Battle</p>
-    <p>Last updated: October 18, 2026</p>
+    <p>Last updated: October 19, 2026</p>
     <p>This English version is a translation. If there is any inconsistency, the Japanese version prevails.</p>
 
     <div>
@@ -57,6 +57,27 @@ import Base from '../../../../layouts/Base.astro';
           <li>Contacts, photos, or other data on your device</li>
           <li>Android advertising ID</li>
         </ul>
+
+        <h3>2.4 Browser version</h3>
+        <p>
+          The app can also be played in a web browser (https://waribashi.meowtaverse-games.com/).
+          The browser version works as follows; otherwise, it is the same as the app version.
+        </p>
+        <ul>
+          <li>It does not display ads (Google AdMob is not used).</li>
+          <li>
+            Firebase Analytics is used to analyze usage. Storage and use of data for advertising, ad personalization, and Google signals are disabled.
+            For analytics, identifiers such as cookies are stored in your browser.
+          </li>
+          <li>Firebase Crashlytics is not used.</li>
+          <li>
+            In addition to device type, OS version, and language settings, information such as browser type and version, screen size, and the page viewed and referring page is sent.
+          </li>
+          <li>Anonymous authentication information and game settings are stored in your browser’s storage.</li>
+          <li>
+            The program and fonts needed to display the browser version are loaded from Google servers (gstatic.com). When this happens, your IP address and browser information are sent to Google.
+          </li>
+        </ul>
       </section>
 
       <section>
@@ -78,7 +99,7 @@ import Base from '../../../../layouts/Base.astro';
         </p>
         <ul>
           <li>
-            <strong>Google AdMob</strong> (ad delivery) —
+            <strong>Google AdMob</strong> (ad delivery; app version only) —
             <a
               href="https://policies.google.com/privacy?hl=en"
               target="_blank"
@@ -98,7 +119,10 @@ import Base from '../../../../layouts/Base.astro';
             </a>
           </li>
           <li>
-            <strong>Firebase Crashlytics</strong> (crash reporting)
+            <strong>Firebase Crashlytics</strong> (crash reporting; app version only)
+          </li>
+          <li>
+            <strong>Firebase Hosting</strong> (delivery of the browser version; browser version only)
           </li>
           <li>
             <strong>Firebase Authentication</strong> (anonymous authentication)
@@ -112,7 +136,7 @@ import Base from '../../../../layouts/Base.astro';
       <section>
         <h2>5. Advertising and tracking</h2>
         <p>
-          The app displays ads using Google AdMob.
+          The app displays ads using Google AdMob (the browser version does not display ads).
           Because the app is intended for all ages, including children, it requests ads with settings that treat all users as children.
         </p>
         <ul>
@@ -138,6 +162,11 @@ import Base from '../../../../layouts/Base.astro';
         <ul>
           <li>Game settings data is stored only on your device and is deleted when you uninstall the app.</li>
           <li>
+            In the browser version, anonymous authentication information, game settings, and analytics identifiers (including cookies) are stored in your browser.
+            They are deleted when you clear the site data for meowtaverse-games.com (including waribashi.meowtaverse-games.com) in your browser
+            (the anonymous authentication account and room records on Firebase are handled as described below).
+          </li>
+          <li>
             The online battle room record (including the user IDs, battle state, and timestamps described in Section 2.2) typically expires 24 hours after the last activity
             (including automatic communication while the battle screen is open) and is then automatically deleted, typically within 24 hours of expiring.
             Even if the device clock is off, it is typically deleted within about 8 days at most.
@@ -161,7 +190,7 @@ import Base from '../../../../layouts/Base.astro';
         <h2>7. Children’s privacy</h2>
         <p>
           The app is intended for all ages, including children. The following describes the practices in versions with the child-directed settings in Section 5
-          (see Section 5 for the exception for older iOS versions).
+          (see Section 5 for the exception for older iOS versions). The same applies to the browser version (which does not display ads).
         </p>
         <ul>
           <li>
@@ -180,7 +209,7 @@ import Base from '../../../../layouts/Base.astro';
             Parents and guardians can contact us using the contact in Section 9 about the handling of their child’s information. We also respond to requests such as deletion of information.
             Because we do not hold information that can identify users, such as names, please provide details such as the approximate date and time of online battle use when making a request.
             If we cannot identify the relevant data, or it has already been deleted automatically, we will explain this.
-            Uninstalling the app also stops further information collection.
+            Uninstalling the app also stops further information collection. In the browser version, closing the page stops collection, and clearing the site data for meowtaverse-games.com also deletes the identifiers.
           </li>
         </ul>
       </section>

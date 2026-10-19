@@ -7,7 +7,7 @@ import Base from '../../../layouts/Base.astro';
     <h1>プライバシーポリシー</h1>
     <p><a href="/en/waribashi/privacy/" lang="en" hreflang="en" class="button not-prose">English version</a></p>
     <p>割り箸バトル（Waribashi Battle）</p>
-    <p>最終更新日: 2026年10月18日</p>
+    <p>最終更新日: 2026年10月19日</p>
 
     <div>
       <section>
@@ -55,6 +55,27 @@ import Base from '../../../layouts/Base.astro';
           <li>連絡先、写真、その他の端末内データ</li>
           <li>Android の広告 ID</li>
         </ul>
+
+        <h3>2.4 ブラウザ版</h3>
+        <p>
+          本アプリは、ブラウザ版（https://waribashi.meowtaverse-games.com/）でも遊べます。
+          ブラウザ版の扱いは次のとおりで、それ以外はアプリ版と同じです。
+        </p>
+        <ul>
+          <li>広告は表示しません（Google AdMob を利用しません）。</li>
+          <li>
+            Firebase Analytics で利用状況を分析します。広告のためのデータの保存と利用、広告のパーソナライズ、Google シグナルは無効にしています。
+            分析のため、ブラウザに Cookie などの識別子を保存します。
+          </li>
+          <li>Firebase Crashlytics は利用しません。</li>
+          <li>
+            デバイスの種類、OS のバージョン、言語の設定に加えて、ブラウザの種類とバージョン、画面の大きさ、表示したページと参照元のページなどの情報が送られます。
+          </li>
+          <li>匿名認証の情報とゲームの設定は、ブラウザの保存領域に保存されます。</li>
+          <li>
+            ブラウザ版の表示に必要なプログラムとフォントを、Google のサーバー（gstatic.com）から読み込みます。このとき、IP アドレスとブラウザの情報が Google に送られます。
+          </li>
+        </ul>
       </section>
 
       <section>
@@ -76,7 +97,7 @@ import Base from '../../../layouts/Base.astro';
         </p>
         <ul>
           <li>
-            <strong>Google AdMob</strong>（広告配信）—
+            <strong>Google AdMob</strong>（広告配信。アプリ版のみ）—
             <a
               href="https://policies.google.com/privacy"
               target="_blank"
@@ -96,7 +117,10 @@ import Base from '../../../layouts/Base.astro';
             </a>
           </li>
           <li>
-            <strong>Firebase Crashlytics</strong>（クラッシュレポート）
+            <strong>Firebase Crashlytics</strong>（クラッシュレポート。アプリ版のみ）
+          </li>
+          <li>
+            <strong>Firebase Hosting</strong>（ブラウザ版の配信。ブラウザ版のみ）
           </li>
           <li>
             <strong>Firebase Authentication</strong>（匿名認証）
@@ -110,7 +134,7 @@ import Base from '../../../layouts/Base.astro';
       <section>
         <h2>5. 広告とトラッキング</h2>
         <p>
-          本アプリはGoogle AdMobを利用して広告を表示します。
+          本アプリはGoogle AdMobを利用して広告を表示します（ブラウザ版では広告を表示しません）。
           本アプリは子どもを含む全年齢の方を対象としているため、すべての利用者を子どもとして扱う設定で広告をリクエストします。
         </p>
         <ul>
@@ -136,6 +160,11 @@ import Base from '../../../layouts/Base.astro';
         <ul>
           <li>ゲームの設定データはお使いの端末内にのみ保存され、アプリを削除すると削除されます。</li>
           <li>
+            ブラウザ版の匿名認証の情報、ゲームの設定、分析用の識別子（Cookie を含む）は、ブラウザに保存されます。
+            ブラウザで meowtaverse-games.com（waribashi.meowtaverse-games.com を含む）のサイトのデータを削除すると、これらは削除されます
+            （Firebase 上の匿名認証のアカウントと部屋の記録の扱いは、下記のとおりです）。
+          </li>
+          <li>
             オンライン対戦の部屋の記録（第2.2節のユーザー ID、対戦の状態、日時）は、最後のやりとり（対戦画面を開いている間の自動の通信を含む）から
             通常24時間で期限切れになり、その後、通常24時間以内に自動で削除されます。端末の時刻がずれている場合でも、通常は最長でおよそ8日以内に削除されます。
             ただし、Android 版・iOS 版の 1.1.0 以前のバージョンだけで使われた部屋の記録は、自動では削除されません
@@ -158,7 +187,7 @@ import Base from '../../../layouts/Base.astro';
         <h2>7. 子どものプライバシー</h2>
         <p>
           本アプリは、子どもを含む全年齢の方を対象としています。以下は、第5節の子ども向けの設定を適用したバージョンでの扱いです
-          （iOS 版の旧バージョンの例外は第5節を参照）。
+          （iOS 版の旧バージョンの例外は第5節を参照）。ブラウザ版も同じ扱いです（ブラウザ版は広告を表示しません）。
         </p>
         <ul>
           <li>
@@ -177,7 +206,7 @@ import Base from '../../../layouts/Base.astro';
             保護者の方は、お子さまの情報の扱いについて、第9節の連絡先からお問い合わせいただけます。情報の削除などのご依頼にも対応します。
             当方は氏名などの利用者を特定できる情報を持たないため、ご依頼の際は、オンライン対戦を利用したおおよその日時などをお知らせください。
             対象のデータを特定できない場合や、すでに自動で削除されている場合は、その旨をご説明します。
-            また、アプリを削除すると、以後の情報の収集は止まります。
+            また、アプリを削除すると、以後の情報の収集は止まります。ブラウザ版は、ページを閉じれば収集が止まり、meowtaverse-games.com のサイトのデータを削除すると識別子も削除されます。
           </li>
         </ul>
       </section>
