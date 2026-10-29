@@ -7,7 +7,7 @@ import Base from '../../../../layouts/Base.astro';
     <h1>Privacy policy</h1>
     <p><a href="/waribashi/privacy/" lang="ja" hreflang="ja" class="button not-prose">日本語</a></p>
     <p>Waribashi - Chopsticks Battle</p>
-    <p>Last updated: October 19, 2026</p>
+    <p>Last updated: October 29, 2026</p>
     <p>This English version is a translation. If there is any inconsistency, the Japanese version prevails.</p>
 
     <div>
@@ -77,6 +77,21 @@ import Base from '../../../../layouts/Base.astro';
           <li>
             The program and fonts needed to display the browser version are loaded from Google servers (gstatic.com). When this happens, your IP address and browser information are sent to Google.
           </li>
+          <li>The age check in Section 2.5 is not performed.</li>
+        </ul>
+
+        <h3>2.5 Age check (app version 1.2.0 and later)</h3>
+        <p>
+          In app version 1.2.0 and later, we ask you to select your birth year and month when you first open the app (if you update from an earlier version, we ask once, the first time you open the updated app).
+          We ask in a neutral way that does not steer you toward any particular age.
+        </p>
+        <ul>
+          <li>Your answer is used only to adjust ad settings to your age (Section 5).</li>
+          <li>Your answer (birth year and month) is stored only on your device and is not sent to our servers or to third parties.</li>
+          <li>
+            When the app requests ads, settings derived from the age group of your answer, indicating whether the request should be treated as child-directed and whether you are under the age of consent, are sent to Google.
+          </li>
+          <li>Your answer cannot be changed in the app. Uninstalling the app deletes your answer, and we ask again after you reinstall it.</li>
         </ul>
       </section>
 
@@ -87,7 +102,8 @@ import Base from '../../../../layouts/Base.astro';
           <li>Providing and improving app features</li>
           <li>Detecting and fixing crashes</li>
           <li>Analyzing usage</li>
-          <li>Displaying ads (with the child-directed settings described in Section 5)</li>
+          <li>Displaying ads (with the age-based settings described in Section 5)</li>
+          <li>Managing consent and choices about ads (Section 5.2)</li>
           <li>Preventing fraud and maintaining security</li>
         </ul>
       </section>
@@ -107,6 +123,9 @@ import Base from '../../../../layouts/Base.astro';
             >
               Google Privacy Policy
             </a>
+          </li>
+          <li>
+            <strong>Google User Messaging Platform</strong> (managing consent and choices about ads; app version 1.2.0 and later only)
           </li>
           <li>
             <strong>Firebase Analytics</strong> (usage analysis) —
@@ -137,30 +156,78 @@ import Base from '../../../../layouts/Base.astro';
         <h2>5. Advertising and tracking</h2>
         <p>
           The app displays ads using Google AdMob (the browser version does not display ads).
-          Because the app is intended for all ages, including children, it requests ads with settings that treat all users as children.
+          The app is intended for all ages, including children.
         </p>
+
+        <h3>5.1 Age-based ad settings (app version 1.2.0 and later)</h3>
+        <p>Based on your answer in Section 2.5, the app requests ads with the following settings.</p>
         <ul>
-          <li>We do not use interest-based advertising (personalized ads) or remarketing.</li>
-          <li>Ad content is limited to general audiences (G).</li>
+          <li>
+            <strong>Under 13</strong>: Ads are requested with settings that treat the request as child-directed. We do not use interest-based advertising (personalized ads) or remarketing,
+            and ad content is limited to general audiences (G). The consent message (Section 5.2) is not shown.
+          </li>
+          <li>
+            <strong>13 to 15</strong>: Ads are requested with settings that treat you as under the age of consent, and ad content is limited to PG or below.
+            The consent message is not shown (in the European Economic Area, the UK, and Switzerland, ads may not be displayed).
+          </li>
+          <li>
+            <strong>16 and over</strong>: Ads are requested without the child-directed settings, and ad content is limited to PG or below.
+            Depending on your region, the consent message in Section 5.2 is shown.
+          </li>
+          <li>
+            Before you answer, or if your answer cannot be read, the same settings as for users under 13 are used.
+          </li>
+        </ul>
+        <p>For all ages:</p>
+        <ul>
           <li>
             We do not use advertising IDs for ad personalization or tracking. In the Android version, the permission to use the advertising ID itself has been removed.
             We do not request tracking permission either.
           </li>
           <li>We have also disabled the sending of ad personalization signals by Firebase Analytics.</li>
+          <li>
+            For ads shown to users 13 and over, Google may use information such as the identifiers and approximate region described in Section 2.1 to deliver and measure ads,
+            within the limits of your choices in Section 5.2 and applicable law.
+          </li>
         </ul>
-        <p>
-          However, the iOS versions available on the App Store as of October 18, 2026 (including versions released before that date)
-          do not have the child-directed settings described above (other than the limit on ad content). These versions request tracking permission through the
-          App Tracking Transparency (ATT) framework and use the IDFA if permission is granted; they may also display interest-based ads.
-          Since October 18, 2026, ad content in these versions is also limited to general audiences (G).
-          Future iOS updates will adopt the practices described above.
-        </p>
+
+        <h3>5.2 Consent and choices about ads</h3>
+        <p>If you answer that you are 16 or over, the app uses Google’s User Messaging Platform to show the following messages.</p>
+        <ul>
+          <li>
+            <strong>European Economic Area (EEA), the UK, and Switzerland</strong>: A message asking for your consent to the use of personal data for advertising.
+            You can choose “Consent” or “Do not consent”, or make choices by purpose and partner. You can play the app in the same way even if you do not consent.
+          </li>
+          <li>
+            <strong>U.S. states with privacy laws</strong>: A message that lets you opt out of the sale or sharing of your personal information.
+          </li>
+          <li>
+            You can change your choices at any time from “Ad privacy settings” on the settings screen. This item appears only in regions where a way to change your choices is required.
+          </li>
+          <li>Your choices are stored on your device by Google’s User Messaging Platform.</li>
+        </ul>
+
+        <h3>5.3 Earlier versions</h3>
+        <ul>
+          <li>
+            App versions earlier than 1.2.0 (except the iOS versions below) do not ask your age and request ads with settings that treat all users as children.
+            They do not use personalized ads or remarketing, and ad content is limited to general audiences (G).
+          </li>
+          <li>
+            iOS versions earlier than 1.1.2 (released on the App Store before October 25, 2026) do not have the child-directed settings described above (other than the limit on ad content).
+            These versions request tracking permission through the App Tracking Transparency (ATT) framework and use the IDFA if permission is granted;
+            they may also display interest-based ads. Since October 18, 2026, ad content in these versions is also limited to general audiences (G).
+          </li>
+        </ul>
       </section>
 
       <section>
         <h2>6. Data storage and deletion</h2>
         <ul>
           <li>Game settings data is stored only on your device and is deleted when you uninstall the app.</li>
+          <li>
+            Your age answer (Section 2.5) and your choices about ads (Section 5.2) are also stored only on your device and are deleted when you uninstall the app.
+          </li>
           <li>
             In the browser version, anonymous authentication information, game settings, and analytics identifiers (including cookies) are stored in your browser.
             They are deleted when you clear the site data for meowtaverse-games.com (including waribashi.meowtaverse-games.com) in your browser
@@ -190,17 +257,22 @@ import Base from '../../../../layouts/Base.astro';
         <h2>7. Children’s privacy</h2>
         <p>
           The app is intended for all ages, including children. The following describes the practices in versions with the child-directed settings in Section 5
-          (see Section 5 for the exception for older iOS versions). The same applies to the browser version (which does not display ads).
+          (see Section 5.3 for the exception for older iOS versions). The same applies to the browser version (which does not display ads).
         </p>
         <ul>
           <li>
             Users do not need to register an account, and we do not ask children to enter personal information such as names, email addresses, or precise location.
+            The birth year and month we ask for in app version 1.2.0 and later (Section 2.5) are not sent off your device.
           </li>
           <li>
-            Of the information described in Section 2, we collect only what is necessary to provide the app, analyze usage, prevent fraud, and deliver ads with the child-directed settings in Section 5.
+            For users who answer that they are under 13, before an answer is given or if it cannot be read, and in versions earlier than 1.2.0, ads are requested with child-directed settings (Sections 5.1 and 5.3).
+            For users who answer that they are 13 to 15, we use settings that treat them as under the age of consent and do not show the consent message.
           </li>
           <li>
-            Google AdMob is an ad SDK that has self-certified that it meets the requirements of the Google Play Families Policy, and we use it with child-directed settings in the app.
+            When child-directed settings are used, we collect only the information described in Section 2 that is necessary to provide the app, analyze usage, prevent fraud, and deliver ads with those settings.
+          </li>
+          <li>
+            Google AdMob is an ad SDK that has self-certified that it meets the requirements of the Google Play Families Policy, and we use it with child-directed settings for users under 13.
           </li>
           <li>
             We operate with consideration for laws concerning children’s privacy, including the U.S. Children’s Online Privacy Protection Act (COPPA).
