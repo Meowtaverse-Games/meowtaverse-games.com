@@ -87,11 +87,18 @@ import Base from '../../../../layouts/Base.astro';
         </p>
         <ul>
           <li>Your answer is used only to adjust ad settings to your age (Section 5).</li>
-          <li>Your answer (birth year and month) is stored only on your device and is not sent to our servers or to third parties.</li>
           <li>
-            When the app requests ads, settings derived from the age group of your answer, indicating whether the request should be treated as child-directed and whether you are under the age of consent, are sent to Google.
+            Your answer (birth year and month) is stored on your device and is not sent to our servers
+            (if device backup is turned on, it may be included in your Google account or iCloud backup, like other app data).
           </li>
-          <li>Your answer cannot be changed in the app. Uninstalling the app deletes your answer, and we ask again after you reinstall it.</li>
+          <li>Your age group (under 13, 13 to 15, or 16 and over) is calculated from the stored birth year and month each time the app starts.</li>
+          <li>
+            When the app requests ads or checks consent information, settings based on your age group are sent to Google: whether the request should be treated as child-directed,
+            whether you are under the age of consent, and the maximum ad content rating. Your birth year and month themselves are not sent.
+          </li>
+          <li>
+            Your answer cannot be changed in the app. Uninstalling the app deletes it from your device, and we ask again after you reinstall the app unless it is restored from a backup.
+          </li>
         </ul>
       </section>
 
@@ -175,7 +182,7 @@ import Base from '../../../../layouts/Base.astro';
             Depending on your region, the consent message in Section 5.2 is shown.
           </li>
           <li>
-            Before you answer, or if your answer cannot be read, the same settings as for users under 13 are used.
+            If your answer cannot be read or could not be saved, the same settings as for users under 13 are used.
           </li>
         </ul>
         <p>For all ages:</p>
@@ -192,19 +199,21 @@ import Base from '../../../../layouts/Base.astro';
         </ul>
 
         <h3>5.2 Consent and choices about ads</h3>
-        <p>If you answer that you are 16 or over, the app uses Google’s User Messaging Platform to show the following messages.</p>
+        <p>If you answer that you are 16 or over, the app uses Google’s User Messaging Platform to give you the following choices.</p>
         <ul>
           <li>
             <strong>European Economic Area (EEA), the UK, and Switzerland</strong>: A message asking for your consent to the use of personal data for advertising.
             You can choose “Consent” or “Do not consent”, or make choices by purpose and partner. You can play the app in the same way even if you do not consent.
           </li>
           <li>
-            <strong>U.S. states with privacy laws</strong>: A message that lets you opt out of the sale or sharing of your personal information.
+            <strong>U.S. states with privacy laws</strong>: You can opt out of the sale or sharing of your personal information from “Ad privacy settings” on the settings screen.
           </li>
           <li>
             You can change your choices at any time from “Ad privacy settings” on the settings screen. This item appears only in regions where a way to change your choices is required.
           </li>
-          <li>Your choices are stored on your device by Google’s User Messaging Platform.</li>
+          <li>
+            Your choices are stored on your device by Google’s User Messaging Platform and are sent to Google (and, depending on your choices, to ad partners) when ads are requested.
+          </li>
         </ul>
 
         <h3>5.3 Earlier versions</h3>
@@ -226,7 +235,8 @@ import Base from '../../../../layouts/Base.astro';
         <ul>
           <li>Game settings data is stored only on your device and is deleted when you uninstall the app.</li>
           <li>
-            Your age answer (Section 2.5) and your choices about ads (Section 5.2) are also stored only on your device and are deleted when you uninstall the app.
+            Your age answer (Section 2.5) and your choices about ads (Section 5.2) are stored on your device and are deleted from it when you uninstall the app
+            (they may be included in a device backup and restored when you reinstall; see Section 5.2 for how your ad choices are sent).
           </li>
           <li>
             In the browser version, anonymous authentication information, game settings, and analytics identifiers (including cookies) are stored in your browser.
@@ -262,10 +272,10 @@ import Base from '../../../../layouts/Base.astro';
         <ul>
           <li>
             Users do not need to register an account, and we do not ask children to enter personal information such as names, email addresses, or precise location.
-            The birth year and month we ask for in app version 1.2.0 and later (Section 2.5) are not sent off your device.
+            The birth year and month we ask for in app version 1.2.0 and later (Section 2.5) are not sent to our servers or to Google.
           </li>
           <li>
-            For users who answer that they are under 13, before an answer is given or if it cannot be read, and in versions earlier than 1.2.0, ads are requested with child-directed settings (Sections 5.1 and 5.3).
+            For users who answer that they are under 13, if the answer cannot be read or could not be saved, and in versions earlier than 1.2.0 (except the older iOS versions in Section 5.3), ads are requested with child-directed settings (Sections 5.1 and 5.3).
             For users who answer that they are 13 to 15, we use settings that treat them as under the age of consent and do not show the consent message.
           </li>
           <li>
